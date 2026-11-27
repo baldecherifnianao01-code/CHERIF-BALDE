@@ -4,8 +4,11 @@ import fsp from 'node:fs/promises';
 import path from 'node:path';
 import type { AdminCredential, ContactMessage, DatabaseState, PortfolioData } from './types.ts';
 
+const IS_SERVERLESS = Boolean(process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME);
 const ROOT_DIR = process.cwd();
-const DATA_DIR = path.resolve(ROOT_DIR, 'data');
+const DATA_DIR = IS_SERVERLESS
+  ? path.resolve('/tmp', 'cherif-balde-data')
+  : path.resolve(ROOT_DIR, 'data');
 export const UPLOADS_DIR = path.resolve(DATA_DIR, 'uploads');
 const DB_FILE = path.resolve(DATA_DIR, 'db.json');
 
