@@ -32,7 +32,7 @@ export function PhotoFrame({
           alt={alt}
           referrerPolicy="no-referrer"
           onError={() => setFailed(true)}
-          className="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.02]"
+          className="h-full w-full object-cover object-top transition-transform duration-500 hover:scale-[1.02]"
         />
       </div>
     );

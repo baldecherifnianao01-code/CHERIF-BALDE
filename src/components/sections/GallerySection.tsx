@@ -121,7 +121,7 @@ export function GallerySection() {
                       src={photo.url}
                       alt={caption || categoryLabel}
                       referrerPolicy="no-referrer"
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                      className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
                     />
                     <span className="absolute right-3 top-3 inline-flex h-8 w-8 items-center justify-center rounded-lg bg-black/60 text-white opacity-0 transition-opacity group-hover:opacity-100">
                       <Maximize2 className="h-4 w-4" />

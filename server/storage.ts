@@ -52,8 +52,8 @@ export function createInitialPortfolio(): PortfolioData {
       tiktokUrl: '',
       linkedinUrl: '',
       otherSocials: [],
-      heroPhotoId: null,
-      aboutPhotoId: null,
+      heroPhotoId: 'photo-portrait-cherif',
+      aboutPhotoId: 'photo-diplome-cherif',
       cvFileUrl: null,
       cvFileName: null,
       analyticsId: process.env.GA_MEASUREMENT_ID || '',
@@ -339,7 +339,24 @@ export function createInitialPortfolio(): PortfolioData {
       { id: 'int-read', label: 'Lecture', labelEn: 'Reading', icon: 'BookOpen' },
       { id: 'int-media', label: 'Création de contenus numériques', labelEn: 'Digital Content Creation', icon: 'Film' },
     ],
-    gallery: [],
+    gallery: [
+      {
+        id: 'photo-portrait-cherif',
+        url: '/assets/aistudio/Ma_photo_760ae2f3.png',
+        caption: 'Cherif Balde — Portrait professionnel',
+        captionEn: 'Cherif Balde — Professional Portrait',
+        category: 'portrait',
+        createdAt: '2026-11-27T08:30:00.000Z',
+      },
+      {
+        id: 'photo-diplome-cherif',
+        url: '/assets/aistudio/Diplome_77902ff2.jpeg',
+        caption: 'Remise de diplôme — Licence professionnelle en Multimédia et Technologie du Web',
+        captionEn: "Graduation Ceremony — Professional Bachelor's Degree in Multimedia & Web Technology",
+        category: 'event',
+        createdAt: '2026-11-27T08:30:00.000Z',
+      },
+    ],
   };
 }
 
